@@ -412,7 +412,7 @@ template {
   align-items: center;
 }
 .main__section-text_centered:last-child {
-  width: 60%;
+  width: 65%;
   margin: 0 auto;
   flex-wrap: wrap;
 }

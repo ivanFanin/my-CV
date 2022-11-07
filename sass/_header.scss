@@ -1,0 +1,91 @@
+@use "./mixins" as mix;
+@use "./variables" as var;
+
+.header {
+  background-color: var.$headerFooterBGColor;
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1em 3em;
+  
+    @media (min-width: 600px) {
+         justify-content: space-between;
+    }
+  }
+
+  &__name {
+    @include mix.flexCentering;
+
+    font: {
+      size: var.$headerNameFontSize;
+      weight: bold;
+      style: italic;
+    }
+  }
+
+  &__item-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    transition: background-color 0.5s ease;
+    border-bottom: 3px solid var.$linksHoverColor;
+    margin-right: 20px;
+    font-size: var.$navElemFontSize;
+  }
+
+  &__list-item:hover {
+    background-color: darkgray;
+    padding: 0.2em .3em;
+    border-radius: 5px;
+  }
+
+  &__toggle {
+    @include mix.flexCentering;
+    transform: scale(1.5);
+    cursor: pointer;
+    flex-direction: column;   
+  }
+
+  &__image-box {
+  }
+
+  &__image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    filter: grayscale(100%);
+  }
+
+  &__link {
+  }
+}
+.item-list {
+  @include mix.listStyleReset;
+}
+
+.list-item {
+  
+}
+
+.link {
+  @include mix.listItemStyleReset;
+
+  &_hovered {
+    transition: color .5s ease-in-out;
+  }
+
+  &_hovered:hover {
+    color: var.$linksHoverColor;
+  }
+}
+
+.bi {
+  margin: .3em;
+}

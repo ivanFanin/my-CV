@@ -1,0 +1,112 @@
+@use "./variables" as var;
+@use "./mixins" as mix;
+
+.main {
+  &__body {
+    padding: 2em 4em;
+    width: 80%;
+    margin: 0 auto;
+    font-size: var.$sectionBodyFontSize;
+  }
+
+  &__section {
+  }
+
+  &__section-body {
+  }
+
+  &__section-title {
+    display: flex;
+    align-items: center;
+    font-size: var.$sectionTitleFontSize;
+    background-color: #e0e0e0;
+    padding: 0.5em;
+    border-radius: 5px;
+  }
+
+  &__icon {
+    margin-right: 1em;
+  }
+
+  &__section-text {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    padding: 1em 0;
+    margin: 1em 0;
+
+    &_centered {
+      @include mix.flexCentering;
+    }
+
+    &_centered:last-child {
+      width: 60%;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item-list {
+    padding: 0 2em 0 2em;
+  }
+
+  &__list-item {
+    margin: 0.5em 0;
+  }
+
+  &__section-year {
+    font-size: var.$yearFontSize;
+    @include mix.flexCentering;
+  }
+
+  &__section-agency {
+  }
+
+  &__section-link {
+  }
+
+  &__section-func {
+  }
+
+  &__section-item {
+    background-color: #e0e0e0;
+    font-size: 1.5em;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  &__table {
+  }
+}
+.link {
+}
+.item-list {
+}
+.list-item {
+}
+.table {
+  background-color: var.$headerFooterBGColor;
+  border: 3px solid #fff;
+  border-collapse: collapse;
+  overflow: hidden;
+  width: 75%;
+  border-radius: 1em;
+
+  &__row {
+    border: 3px solid #fff;
+  }
+
+  &__cell {
+    border: 3px solid #fff;
+    padding: 0.5em;
+  }
+
+  &__cell:last-child {
+    text-align: center;
+    width: 15%;
+  }
+
+  &__cell:first-child {
+    padding-left: 2em;
+  }
+}

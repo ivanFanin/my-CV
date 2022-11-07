@@ -1,0 +1,19 @@
+@use '../css/normalize.css';
+@use './mixins';
+@use './variables';
+@use './header';
+@use './main';
+@use './footer';
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}

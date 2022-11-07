@@ -1,0 +1,16 @@
+@mixin listStyleReset {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin listItemStyleReset {
+  text-decoration: none;
+  color: #003333;
+}
+
+@mixin flexCentering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

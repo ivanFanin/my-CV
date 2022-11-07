@@ -1,0 +1,49 @@
+@use './variables' as var;
+@use './mixins' as mix;
+
+.footer {
+  background-color: var.$headerFooterBGColor;
+  font-size: 1.5em;
+
+  &__body {
+  }
+
+  &__item-list {
+    padding: 2em 0;
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  &__list-item {
+  }
+
+  &__image {
+    transform: scale(1.5);
+  }
+
+  &__icon {
+    transform: scale(2);
+    margin: 0 .3em;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+  }
+
+  &__list-items {
+  }
+
+  &__rights {
+    @include mix.flexCentering;
+    padding: 2em 0 1em 0;
+  }
+}
+.item-list {
+}
+.link {
+}

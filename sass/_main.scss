@@ -21,10 +21,16 @@
     justify-content: space-between;
     font-size: var.$sectionTitleFontSize;
     background-color: #e0e0e0;
-    padding: 0.5em;
+    padding: .5em;
     border-radius: 20px;
-    margin-bottom: 0.5em;
+    margin-bottom: .5em;
     box-shadow: 6px 6px 12px #000;
+  }
+
+  &__span-heading:hover {
+    cursor: pointer;
+font-weight: bold;
+transition: font-weight 1s ease;
   }
 
   &__icon {
@@ -36,6 +42,13 @@
     grid-template-columns: 2fr 5fr;
     padding: 1em 0;
     margin: 1em 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border: {
+      width: 1px;
+      style: solid;
+      color:#000;
+      radius: 20px;
+    }
 
     &_centered {
       @include mix.flexCentering;
@@ -89,11 +102,16 @@
 }
 .table {
   background-color: var.$headerFooterBGColor;
-  border: 3px solid #fff;
-  border-collapse: collapse;
+  border: {
+    collapse: collapse;
+    radius: 1em;
+    width: 3px;
+    style: solid;
+    color: #fff;
+  }
   overflow: hidden;
   width: 75%;
-  border-radius: 1em;
+  
 
   &__row {
     border: 3px solid #fff;
@@ -114,9 +132,9 @@
   }
 }
 
-.drop-down {
+/* .drop-down {
   display: none;
-}
+} */
 
 .bi-caret-down-square {
   cursor: pointer;

@@ -402,11 +402,13 @@ template {
 }
 .main__span-heading:hover {
   cursor: pointer;
-  font-weight: bold;
-  transition: font-weight 1s ease;
+  color: rgb(98, 16, 250);
+  font-size: 52px;
+  transition: all 1s ease;
 }
 .main__icon {
   margin-right: 1em;
+  transform: scale(1.5);
 }
 .main__section-text {
   display: grid;
@@ -430,7 +432,7 @@ template {
   flex-wrap: wrap;
 }
 .main__item-list {
-  padding: 0 2em 0 2em;
+  padding: 0 2em;
 }
 .main__list-item {
   margin: 0.5em 0;
@@ -473,14 +475,13 @@ template {
   padding-left: 2em;
 }
 
-.bi-caret-down-square {
-  cursor: pointer;
-  display: flex;
-  align-self: end;
-}
-
-.bi-caret-down-square:hover .dropdown-content {
+.bi-caret-down-square:hover,
+.bi-brightness-high-fill:hover,
+.bi-explicit:hover {
   color: rgb(98, 16, 250);
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: all 0.5s ease;
 }
 
 .footer {

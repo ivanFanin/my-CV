@@ -21,7 +21,7 @@
     justify-content: space-between;
     font-size: var.$sectionTitleFontSize;
     background-color: #e0e0e0;
-    padding: .5em;
+    padding: 0.5em;
     border-radius: 20px;
     margin: 1em 0;
     box-shadow: 6px 6px 12px #000;
@@ -29,12 +29,14 @@
 
   &__span-heading:hover {
     cursor: pointer;
-font-weight: bold;
-transition: font-weight 1s ease;
+    color: var.$linksHoverColor;
+    font-size: 52px;
+    transition: all 1s ease;
   }
 
   &__icon {
     margin-right: 1em;
+    transform: scale(1.5);
   }
 
   &__section-text {
@@ -42,11 +44,11 @@ transition: font-weight 1s ease;
     grid-template-columns: 2fr 5fr;
     padding: 1em 0;
     margin: 1em 0;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     border: {
       width: 1px;
       style: solid;
-      color:#000;
+      color: #000;
       radius: 20px;
     }
 
@@ -62,7 +64,7 @@ transition: font-weight 1s ease;
   }
 
   &__item-list {
-    padding: 0 2em 0 2em;
+    padding: 0 2em;
   }
 
   &__list-item {
@@ -111,7 +113,6 @@ transition: font-weight 1s ease;
   }
   overflow: hidden;
   width: 75%;
-  
 
   &__row {
     border: 3px solid #fff;
@@ -132,14 +133,11 @@ transition: font-weight 1s ease;
   }
 }
 
-
-
-.bi-caret-down-square {
-  cursor: pointer;
-  display: flex;
-  align-self: end;
-}
-
-.bi-caret-down-square:hover .dropdown-content {
+.bi-caret-down-square:hover,
+.bi-brightness-high-fill:hover,
+.bi-explicit:hover {
   color: var.$linksHoverColor;
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: all 0.5s ease;
 }

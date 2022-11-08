@@ -392,10 +392,13 @@ template {
 .main__section-title {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-size: 2em;
   background-color: #e0e0e0;
   padding: 0.5em;
-  border-radius: 5px;
+  border-radius: 20px;
+  margin-bottom: 0.5em;
+  box-shadow: 6px 6px 12px #000;
 }
 .main__icon {
   margin-right: 1em;
@@ -460,6 +463,16 @@ template {
 
 .drop-down {
   display: none;
+}
+
+.bi-caret-down-square {
+  cursor: pointer;
+  display: flex;
+  align-self: end;
+}
+
+.bi-caret-down-square:hover {
+  color: rgb(98, 16, 250);
 }
 
 .footer {

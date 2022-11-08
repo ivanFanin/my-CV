@@ -458,6 +458,10 @@ template {
   padding-left: 2em;
 }
 
+.drop-down {
+  display: none;
+}
+
 .footer {
   background-color: #E0E0E0;
   font-size: 1.5em;

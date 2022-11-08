@@ -397,7 +397,7 @@ template {
   background-color: #e0e0e0;
   padding: 0.5em;
   border-radius: 20px;
-  margin-bottom: 0.5em;
+  margin: 1em 0;
   box-shadow: 6px 6px 12px #000;
 }
 .main__span-heading:hover {
@@ -473,16 +473,13 @@ template {
   padding-left: 2em;
 }
 
-/* .drop-down {
-  display: none;
-} */
 .bi-caret-down-square {
   cursor: pointer;
   display: flex;
   align-self: end;
 }
 
-.bi-caret-down-square:hover {
+.bi-caret-down-square:hover .dropdown-content {
   color: rgb(98, 16, 250);
 }
 

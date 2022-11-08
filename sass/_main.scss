@@ -23,7 +23,7 @@
     background-color: #e0e0e0;
     padding: .5em;
     border-radius: 20px;
-    margin-bottom: .5em;
+    margin: 1em 0;
     box-shadow: 6px 6px 12px #000;
   }
 
@@ -132,9 +132,7 @@ transition: font-weight 1s ease;
   }
 }
 
-/* .drop-down {
-  display: none;
-} */
+
 
 .bi-caret-down-square {
   cursor: pointer;
@@ -142,6 +140,6 @@ transition: font-weight 1s ease;
   align-self: end;
 }
 
-.bi-caret-down-square:hover {
+.bi-caret-down-square:hover .dropdown-content {
   color: var.$linksHoverColor;
 }

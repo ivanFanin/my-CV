@@ -1,12 +1,11 @@
-@use "./variables" as var;
-@use "./mixins" as mix;
+@use './forwarded-styles.scss' as for;
 
 .main {
   &__body {
     padding: 2em 4em;
     width: 80%;
     margin: 0 auto;
-    font-size: var.$sectionBodyFontSize;
+    font-size: for.$sectionBodyFontSize;
   }
 
   &__section {
@@ -19,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: var.$sectionTitleFontSize;
+    font-size: for.$sectionTitleFontSize;
     background-color: #e0e0e0;
     padding: 0.5em;
     border-radius: 20px;
@@ -29,7 +28,7 @@
 
   &__span-heading:hover {
     cursor: pointer;
-    color: var.$linksHoverColor;
+    color: for.$linksHoverColor;
     font-size: 52px;
     transition: all 1s ease;
   }
@@ -53,7 +52,7 @@
     }
 
     &_centered {
-      @include mix.flexCentering;
+      @include for.flexCentering;
     }
 
     &_centered:last-child {
@@ -72,8 +71,8 @@
   }
 
   &__section-year {
-    font-size: var.$yearFontSize;
-    @include mix.flexCentering;
+    font-size: for.$yearFontSize;
+    @include for.flexCentering;
   }
 
   &__section-agency {
@@ -103,7 +102,7 @@
 .list-item {
 }
 .table {
-  background-color: var.$headerFooterBGColor;
+  background-color: for.$headerFooterBGColor;
   border: {
     collapse: collapse;
     radius: 1em;
@@ -136,7 +135,7 @@
 .bi-caret-down-square:hover,
 .bi-brightness-high-fill:hover,
 .bi-explicit:hover {
-  color: var.$linksHoverColor;
+  color: for.$linksHoverColor;
   cursor: pointer;
   transform: scale(1.2);
   transition: all 0.5s ease;

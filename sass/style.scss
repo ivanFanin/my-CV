@@ -1,9 +1,7 @@
-@use '../css/normalize.css';
-@use './mixins';
-@use './variables';
 @use './header';
 @use './main';
 @use './footer';
+
 
 html {
   font-size: 100%;

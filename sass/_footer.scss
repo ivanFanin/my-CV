@@ -1,8 +1,7 @@
-@use './variables' as var;
-@use './mixins' as mix;
+@use './forwarded-styles.scss' as for;
 
 .footer {
-  background-color: var.$headerFooterBGColor;
+  background-color: for.$headerFooterBGColor;
   font-size: 1.5em;
 
   &__body {
@@ -39,7 +38,7 @@
   }
 
   &__rights {
-    @include mix.flexCentering;
+    @include for.flexCentering;
     padding: 2em 0 1em 0;
   }
 }

@@ -1,8 +1,7 @@
-@use "./mixins" as mix;
-@use "./variables" as var;
+@use './forwarded-styles.scss' as for;
 
 .header {
-  background-color: var.$headerFooterBGColor;
+  background-color: for.$headerFooterBGColor;
 
   &__body {
     display: flex;
@@ -16,10 +15,10 @@
   }
 
   &__name {
-    @include mix.flexCentering;
+    @include for.flexCentering;
 
     font: {
-      size: var.$headerNameFontSize;
+      size: for.$headerNameFontSize;
       weight: bold;
       style: italic;
     }
@@ -35,9 +34,9 @@
     display: flex;
     align-items: center;
     transition: background-color 0.5s ease;
-    border-bottom: 3px solid var.$linksHoverColor;
+    border-bottom: 3px solid for.$linksHoverColor;
     margin-right: 20px;
-    font-size: var.$navElemFontSize;
+    font-size: for.$navElemFontSize;
   }
 
   &__list-item:hover {
@@ -47,7 +46,7 @@
   }
 
   &__toggle {
-    @include mix.flexCentering;
+    @include for.flexCentering;
     transform: scale(1.5);
     cursor: pointer;
     flex-direction: column;   
@@ -67,7 +66,7 @@
   }
 }
 .item-list {
-  @include mix.listStyleReset;
+  @include for.listStyleReset;
 }
 
 .list-item {
@@ -75,14 +74,14 @@
 }
 
 .link {
-  @include mix.listItemStyleReset;
+  @include for.listItemStyleReset;
 
   &_hovered {
     transition: color .5s ease-in-out;
   }
 
   &_hovered:hover {
-    color: var.$linksHoverColor;
+    color: for.$linksHoverColor;
   }
 }
 
